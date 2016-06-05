@@ -1,0 +1,25 @@
+
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.kauth";
+option java_outer_classname = "KAuthProto";
+
+package kauth;
+
+// The greeting service definition.
+service Auth {
+  // Sends a greeting
+  rpc Authorize (AuthRequest) returns (AuthReply) {}
+}
+
+// The request message containing the user's name.
+message AuthRequest {
+  string url = 1;
+}
+
+// The response message containing the greetings
+message AuthReply {
+  string message = 1;
+}
